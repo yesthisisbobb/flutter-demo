@@ -42,10 +42,11 @@ class HomePage extends StatelessWidget {
           body: SizedBox(
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
-            child: LayoutBuilder(builder: (context, constraint) {
-              int columnCount = (constraint.maxWidth / 200.0).floor();
+            child: LayoutBuilder(
+              builder: (context, constraint) {
+                int columnCount = (constraint.maxWidth / 200.0).floor();
 
-              return Padding(
+                return Padding(
                   padding: const EdgeInsets.fromLTRB(8.0, 20.0, 8.0, 32.0),
                   child: Consumer<NoteModel>(
                     builder: (context, noteProvider, child) {
@@ -60,8 +61,10 @@ class HomePage extends StatelessWidget {
                             (idx) => NoteWidget(notes[idx], noteProvider)),
                       );
                     },
-                  ));
-            }),
+                  ),
+                );
+              },
+            ),
           ),
         );
       },
