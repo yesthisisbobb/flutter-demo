@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../classes/notes.class.dart';
 import '../pages/home.dart';
 import '../providers/note.provider.dart';
-import 'package:provider/provider.dart';
 
 class NoteWidget extends StatelessWidget {
   Note note = Note(0, 'title', 'content');
